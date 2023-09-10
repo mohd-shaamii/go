@@ -1,20 +1,18 @@
 package main
-
-import (
-	"fmt"
-)
-func fibonacci(n int) int {
-	if n <= 1 {
-		return n
-	}
-	return fibonacci(n-1) + fibonacci(n-2)
-}
-func main() {
-	fmt.Print("Enter the number of Fibonacci numbers to generate: ")
-	var n int
-	fmt.Scan(&n)
-	fmt.Println("Fibonacci Series:")
-	for i := 0; i < n; i++ {
-		fmt.Printf("%d ", fibonacci(i))
-	}
+import "fmt"
+func main(){
+    var num int
+    a:=0
+    b:=1
+    fmt.Printf("Enter a number:")
+    fmt.Scan(&num)
+    copy:=0
+    for i:=0;i<num;i++{
+        if (a%2==0){
+            fmt.Println(a)
+        }
+        copy=a+b
+        a=b
+        b=copy
+    }
 }
